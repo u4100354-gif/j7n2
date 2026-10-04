@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Музыка</title>
+<meta name="description" content="Её плейлист: ПОЛМАТЕРИ и Дайте танк (!).">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="music">
+
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <nav class="nav__inner">
+    <a class="nav__mark" href="index.html">
+      <span class="nav__glyph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8.5-5.2-8.5-11A4.8 4.8 0 0 1 12 7.6 4.8 4.8 0 0 1 20.5 10c0 5.8-8.5 11-8.5 11z"/></svg></span>
+      <span class="nav__name">Ульяна</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html" data-nav="home">Главная</a></li>
+      <li><a href="story.html" data-nav="story">История</a></li>
+      <li><a href="about.html" data-nav="about">Она</a></li>
+      <li><a href="quotes.html" data-nav="quotes">Её слова</a></li>
+      <li><a href="his.html" data-nav="his">Его слова</a></li>
+      <li><a href="moments.html" data-nav="moments">Моменты</a></li>
+      <li><a href="music.html" data-nav="music">Музыка</a></li>
+    </ul>
+    <button class="nav__burger" aria-label="Меню" aria-expanded="false"><span></span></button>
+    <a class="btn btn--sm" href="moments.html">Моменты</a>
+  </nav>
+  <div class="nav__mobile">
+    <a href="index.html">Главная</a>
+    <a href="story.html">История</a>
+    <a href="about.html">Она</a>
+    <a href="quotes.html">Её слова</a>
+    <a href="his.html">Его слова</a>
+    <a href="moments.html">Моменты</a>
+    <a href="music.html">Музыка</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero hero--short hero--page">
+    <div class="orb orb--2" data-parallax="0.1"></div>
+    <div class="orb orb--1" data-parallax="0.15"></div>
+    <div class="hero__inner">
+      <p class="eyebrow" data-reveal>Музыка</p>
+      <h1 class="hero__title">Её плейлист</h1>
+      <p class="hero__sub" data-reveal>ПОЛМАТЕРИ и Дайте танк (!). Нажми на любую — заиграет.</p>
+    </div>
+  </section>
+
+  <section class="section section--light on-light" id="playlist">
+    <div class="wrap wrap--narrow">
+      <div class="player">
+        <div class="now" data-reveal>
+          <div class="now__cover"><img id="nowCover" src="assets/music/01.jpg" alt=""></div>
+          <div class="now__body">
+            <div class="now__label">Сейчас играет</div>
+            <div class="now__title" id="nowTitle">—</div>
+            <div class="now__artist" id="nowArtist"></div>
+            <div class="now__progress" id="bar"><div class="now__fill" id="fill"></div></div>
+            <div class="now__times"><span id="cur">0:00</span><span id="dur">0:30</span></div>
+          </div>
+          <button class="now__btn" id="btn" aria-label="Играть">
+            <svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+        </div>
+        <div class="tracks" id="tracks" data-reveal></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap wrap--narrow">
+      <div class="section-head">
+        <h2 class="h2" data-reveal>Две группы</h2>
+        <p class="lead" data-reveal>ПОЛМАТЕРИ — про всё сразу. Дайте танк (!) — про то, что между строк.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 class="h2" data-reveal>Дальше — здесь</h2>
+    <div class="cta__nav" data-reveal>
+      <a href="index.html">Главная</a>
+      <a href="story.html">История</a>
+      <a href="quotes.html">Её слова</a>
+      <a href="his.html">Его слова</a>
+      <a href="moments.html">Моменты</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p><span id="year">2026</span></p>
+</footer>
+
+<button class="totop" aria-label="Наверх">↑</button>
+<script>
+const TRACKS = [{"title": "только для тебя", "artist": "плм", "cover": "01.jpg", "audio": "01.m4a"}, {"title": "счастливы вместе", "artist": "нексюша & плм", "cover": "02.jpg", "audio": "02.m4a"}, {"title": "голод", "artist": "плм", "cover": "03.jpg", "audio": "03.m4a"}, {"title": "маша", "artist": "плм", "cover": "04.jpg", "audio": "04.m4a"}, {"title": "бойфренд", "artist": "плм", "cover": "05.jpg", "audio": "05.m4a"}, {"title": "красотка", "artist": "плм", "cover": "06.jpg", "audio": "06.m4a"}, {"title": "Люди", "artist": "Дайте Танк (!)", "cover": "07.jpg", "audio": "07.m4a"}, {"title": "Утро", "artist": "Дайте Танк (!)", "cover": "08.jpg", "audio": "08.m4a"}, {"title": "Маленький", "artist": "Дайте Танк (!)", "cover": "09.jpg", "audio": "09.m4a"}, {"title": "Мы", "artist": "Дайте Танк (!)", "cover": "10.jpg", "audio": "10.m4a"}, {"title": "Три четверти", "artist": "Дайте Танк (!)", "cover": "11.jpg", "audio": "11.m4a"}];
+const P = 'assets/music/';
+const audio = new Audio();
+audio.preload = 'metadata';
+const rowsEl = document.getElementById('tracks');
+const nowCover = document.getElementById('nowCover');
+const nowTitle = document.getElementById('nowTitle');
+const nowArtist = document.getElementById('nowArtist');
+const fill = document.getElementById('fill');
+const cur = document.getElementById('cur');
+const dur = document.getElementById('dur');
+const btn = document.getElementById('btn');
+const bar = document.getElementById('bar');
+const rows = [];
+let current = -1;
+
+function fmt(s){ s = Math.max(0, Math.floor(s||0)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
+
+TRACKS.forEach((t, i) => {
+  const b = document.createElement('button');
+  b.className = 'track';
+  b.type = 'button';
+  b.innerHTML =
+    '<span class="track__cover"><img loading="lazy" src="' + P + t.cover + '" alt=""></span>' +
+    '<span class="track__meta"><span class="track__title">' + t.title + '</span>' +
+    '<span class="track__artist">' + t.artist + '</span></span>' +
+    '<span class="track__play"><svg class="ic-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>' +
+    '<svg class="ic-pause" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></span>';
+  b.addEventListener('click', () => choose(i));
+  rowsEl.appendChild(b);
+  rows.push(b);
+});
+
+function choose(i){
+  if (i === current){
+    if (audio.paused) audio.play(); else audio.pause();
+    return;
+  }
+  current = i;
+  const t = TRACKS[i];
+  nowCover.src = P + t.cover;
+  nowTitle.textContent = t.title;
+  nowArtist.textContent = t.artist;
+  dur.textContent = '0:30';
+  cur.textContent = '0:00';
+  fill.style.width = '0%';
+  rows.forEach((r, k) => r.classList.toggle('is-active', k === i));
+  audio.src = P + t.audio;
+  audio.play();
+}
+
+function markPlaying(v){
+  btn.classList.toggle('is-playing', v);
+  if (rows[current]) rows[current].classList.toggle('is-playing', v);
+}
+audio.addEventListener('play', () => markPlaying(true));
+audio.addEventListener('playing', () => markPlaying(true));
+audio.addEventListener('pause', () => markPlaying(false));
+audio.addEventListener('ended', () => { markPlaying(false); fill.style.width = '0%'; cur.textContent = '0:00'; });
+audio.addEventListener('loadedmetadata', () => { if (isFinite(audio.duration)) dur.textContent = fmt(audio.duration); });
+audio.addEventListener('timeupdate', () => {
+  cur.textContent = fmt(audio.currentTime);
+  fill.style.width = (audio.duration ? (audio.currentTime / audio.duration * 100) : 0) + '%';
+});
+
+btn.addEventListener('click', () => {
+  if (current < 0) { choose(0); return; }
+  if (audio.paused) audio.play(); else audio.pause();
+});
+bar.addEventListener('click', (e) => {
+  if (!audio.duration) return;
+  const r = bar.getBoundingClientRect();
+  audio.currentTime = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * audio.duration;
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
