@@ -149,7 +149,7 @@ img{max-width:100%;display:block}
   background:linear-gradient(90deg,color-mix(in srgb,var(--rose) 14%,transparent),color-mix(in srgb,var(--violet) 14%,transparent));
   border-block:1px solid rgba(255,255,255,.1)}
 .marquee__track{display:inline-block;font-size:clamp(19px,2.5vw,29px);font-weight:600;
-  color:var(--hero-a);animation:slide 30s linear infinite}
+  color:var(--hero-a);animation:slide 180s linear infinite}
 .marquee__track span{padding-right:.4em}
 @keyframes slide{to{transform:translateX(-50%)}}
 

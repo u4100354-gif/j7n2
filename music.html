@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Музыка</title>
 <meta name="description" content="Её плейлист: ПОЛМАТЕРИ и Дайте танк (!).">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=0cdb6902">
 </head>
 <body data-page="music">
 
@@ -28,7 +28,6 @@
       <li><a href="music.html" data-nav="music">Музыка</a></li>
     </ul>
     <button class="nav__burger" aria-label="Меню" aria-expanded="false"><span></span></button>
-    <a class="btn btn--sm" href="moments.html">Моменты</a>
   </nav>
   <div class="nav__mobile">
     <a href="index.html">Главная</a>
@@ -178,6 +177,6 @@ bar.addEventListener('click', (e) => {
   audio.currentTime = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * audio.duration;
 });
 </script>
-<script src="script.js"></script>
+<script src="script.js?v=0cdb6902"></script>
 </body>
 </html>
